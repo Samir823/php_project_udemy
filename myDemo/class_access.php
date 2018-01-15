@@ -2,17 +2,18 @@
 
 class Car {
 
-    var $wheels = 4;
-    var $hood = 1;
-    var $engine =1;
+    public $wheels = 4;
+    protected $hood = 1;
+    private $engine =1;
     var $doors =4;
 
-    
-    function MoveWheels(){
 
-        $this->wheels =10;
+   function showProperty(){
 
-         }
+        echo $this->engine;
+
+   }
+
     function CreateDoors(){
         
         $this->doors = 6;
@@ -20,27 +21,22 @@ class Car {
     }
 }
 
-
 $bmw = new Car();
 
 
-class Plane extends Car{
-    var $wheels = 20;
-    
+$semi = new Semi();
+
+class Semi extends Car{
+
+  
 }
 
-
-$jet = new Plane();
-
-echo $jet->wheels;
+$bmw->showProperty();
 
 
-echo "<pre>";
-print_r($bmw);
-print_r($jet);
-echo "</pre>";
+
+
 ?>
-
 
 
 
