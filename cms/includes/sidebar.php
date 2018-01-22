@@ -1,17 +1,16 @@
+
 <div class="col-md-4">
 <?php
     
-  
-    
-    
+      
     if(isset($_POST['submit'])){ 
         
        $search = $_POST['search'];
 
         
-        $quary = "SELECT * FROM posts WHERE post_tags LIKE '%$search%' ";
+        $query = "SELECT * FROM posts WHERE post_tags LIKE '%$search%' ";
         
-        echo $query;
+       
         $search_query = mysqli_query($connection,$query);
        
         if(!$search_query) {
@@ -27,20 +26,9 @@
             echo "SOME RESULT";
         }
         
-    
-        
-           }
-    
-    
-
-    
-    
-    
-    
+               }
     
 ?>
-    
-    
     
                 <!-- Blog Search Well -->
                 <div class="well">
@@ -58,11 +46,7 @@
                     <!-- /.input-group -->
                 </div>
 
-    
-    
-    
-    
-    
+
                 <!-- Blog Categories Well -->
                 <div class="well">
                     <h4>Blog Categories</h4>
