@@ -1,7 +1,7 @@
-<?php include "db.php"?>
-    <?php include "header.php"?>
+<?php include "includes/db.php"?>
+    <?php include"includes/header.php"?>
     <!-- Navigation -->
-<?php include "navigation.php"?>
+<?php include"includes/navigation.php"?>
     <!-- Page Content -->
     <div class="container">
         <div class="row">
@@ -32,10 +32,11 @@
         if($count == 0){ 
         echo "<h1>NO RESULTS</h1>";
         }else{
-             $query = "SELECT * FROM posts";
-                $select_all_post_query = mysqli_query($connection, $query);
+            
+            //    $query = "SELECT * FROM posts";
+              //  $select_all_post_query = mysqli_query($connection, $query);
         
-                while($row =mysqli_fetch_assoc($select_all_post_query)){
+                while($row =mysqli_fetch_assoc($search_query)){
                     $post_title =$row['post_title'];                       $post_author =$row['post_author'];
                     $post_date =$row['post_date'];
                     $post_image =$row['post_image'];
@@ -45,7 +46,7 @@
                     Page Heading
                     <small>Secondary Text</small>
                 </h1>
-                <!-- First Blog Post -se->
+                <!-- First Blog Post -se-->
                 <h2>
                     <a href="#"><?php echo $post_title;?></a>
                 </h2>
@@ -75,7 +76,7 @@
             </div>
 
             <!-- Blog Sidebar Widgets Column -->
-            <?php include "sidebar.php"?>
+            <?php include "includes/sidebar.php"?>
 
 
                 <div class="well">
@@ -86,4 +87,4 @@
             </div>
 
         </div>
-    <?php include "footer.php"?>
+    <?php include "includes/footer.php"?>
