@@ -37,7 +37,7 @@
               //  $select_all_post_query = mysqli_query($connection, $query);
         
                 while($row =mysqli_fetch_assoc($search_query)){
-                    $post_title =$row['post_title'];                       $post_author =$row['post_author'];
+        $post_title =$row['post_title'];                       $post_author =$row['post_author'];
                     $post_date =$row['post_date'];
                     $post_image =$row['post_image'];
                     $post_content =$row['post_content'];
@@ -77,13 +77,6 @@
 
             <!-- Blog Sidebar Widgets Column -->
             <?php include "includes/sidebar.php"?>
-
-
-                <div class="well">
-                    <h4>Side Widget Well</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, perspiciatis adipisci accusamus laudantium odit aliquam repellat tempore quos aspernatur vero.</p>
-                </div>
-
             </div>
 
         </div>
