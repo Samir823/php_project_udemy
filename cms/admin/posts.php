@@ -31,11 +31,11 @@
     
     }
 switch ($source) {
-        case 'add_post';
+    case 'add_post';
         include 'includes/add_post.php'; 
         break;
-    case '34';
-        echo 'NICE 34';
+    case 'edit_post';
+        include 'includes/edit_post.php'; 
         break;
     case '100';
         echo "NICE 100";
@@ -47,6 +47,11 @@ switch ($source) {
         include 'includes/view_all_post.php';
         break;
 }
+
+
+
+
+
 ?>
 
                                 
