@@ -14,7 +14,7 @@ $post_content = $_POST['post_content'];
 $post_date = date ('d-m-y');
 $post_comment_count = 4;    
 
-move_uploaded_file($post_image_temp, "../admin/images/$post_image");
+move_uploaded_file($post_image_temp, "images/$post_image");
 
     
     
