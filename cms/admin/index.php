@@ -2,28 +2,10 @@
 <?php include "includes/admin_header.php" ?>
         
             <?php if($connection) echo "conn"; ?>
-
-
         <div id="page-wrapper">
-            
-            
-            
-            
-            
-            
-            
-            
                     <!-- Navigation -->
 
 <?php include "includes/admin_navigation.php" ?>
-
-
-            
-        
-
-            
-            
-
 
 
             <div class="container-fluid">
