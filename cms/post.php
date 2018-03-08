@@ -7,7 +7,11 @@
         <div class="row">
             <!-- Blog Entries Column -->
             <div class="col-md-8">
-                <?php
+                <?php 
+    ini_set('display_errors', 'On');
+error_reporting(E_ALL);
+
+    
     if(isset($_GET['p_id'])){
         $post_id = $_GET['p_id'];
         
@@ -48,24 +52,49 @@
                 
                 <?php } ?>
                 
-                
-                
-                
-                
-                
-            
-                
-
                 <!-- Blog Comments -->
+                
+                
+                
+                <?php
+                if(isset($_POST['create_comment'])){
+                    $comment_author = $_POST['comment_author'];
+                    $comment_email = $_POST['comment_email'];
+                    $your_comment = $_POST['your_comment'];
+
+                    
+                echo $_POST['comment_author'];
+                }
+                
+                
+                
+                
+                
+                
+                ?>
 
                 <!-- Comments Form -->
                 <div class="well">
                     <h4>Leave a Comment:</h4>
-                    <form role="form">
+                    <form role="form" action="" method="post">
+                        
                         <div class="form-group">
-                            <textarea class="form-control" rows="3"></textarea>
+                            <label for="Author">Author</label>
+                            <input type="text" name="comment_author" class="form-control">
                         </div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <div class="form-group">
+                        <label for="Email">Email</label>
+                            <input type="email" name = "comment_email" class="form-control">
+                        </div>
+                        
+                        
+                        
+                        <div class="form-group">
+                        <label for="Comment">Your Comment</label>
+                            <textarea class="form-control" name="your_comment" rows="3"></textarea>
+                        </div>
+                        
+                        <button type="submit" name="create_comment" class="btn btn-primary">Submit</button>
                     </form>
                 </div>
 

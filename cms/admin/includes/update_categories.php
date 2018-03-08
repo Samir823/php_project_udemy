@@ -21,7 +21,6 @@
                    
                                     <?php } } ?>
                                     
-                                    
                                     <?php //UPDATE QUERY
                                     
                         if(isset($_POST['update_category'])){
@@ -35,15 +34,7 @@
                             }
                     }                
                           
-                                    
-                                    
-                                    
-                                    
                                     ?>
-                                    
-                                    
-                                    
-                                    
                                     
                                     
                                 </div>
